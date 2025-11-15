@@ -108,6 +108,11 @@ function saveData(){
                                                                                                                      })){
                                                                                                                         hideError();
                                                                                                                         window.location.assign("main");
+                                                                                                                        let current_user=user_records.filter((v) =>{
+                                                                                                                             return v.email==email && v.password==password
+                                                                                                                        })[0];
+                                                                                                                        localStorage.setItem("name", current_user.name);
+                                                                                                                        localStorage.setItem("email", current_user.email);
                                                                                                                       }
                                                                                                                       else{
                                                                                                                         showError('the email or the password is incorrect')
