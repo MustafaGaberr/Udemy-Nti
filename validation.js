@@ -96,4 +96,22 @@ function saveData(){
                                                                                                                                         }
                                                                                                                                         }
 
+                                                                                                                   function getData(){
+                                                                                                                    let email, password;
+                                                                                                                    email=document.getElementById("email").value;
+                                                                                                                    password=document.getElementById("password").value;
 
+                                                                                                                    let user_records=new Array();
+                                                                                                                    user_records=JSON.parse(localStorage.getItem("users")) ? JSON.parse(localStorage.getItem("users")) : [];
+                                                                                                                    if(user_records.some((v)=>{
+                                                                                                                    return v.email==email && v.password==password;
+                                                                                                                     })){
+                                                                                                                        hideError();
+                                                                                                                        window.location.assign("main");
+                                                                                                                      }
+                                                                                                                      else{
+                                                                                                                        showError('the email or the password is incorrect')
+                                                                                                                       }
+                                                                                                                        }
+                                                                                                                    
+                                                                                                                                     
