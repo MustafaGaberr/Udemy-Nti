@@ -11,3 +11,19 @@
     background-color: #f8f9fa;
     border-radius: 10px;
 }
+
+.cart-summary {
+    background-color: #f8f9fa;
+}
+
+.btn-burbleBg {
+    background-color: #a435f0;
+    color: white;
+}
+
+.cart-item {
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
